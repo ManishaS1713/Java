@@ -1,0 +1,42 @@
+package JavaEclipseCode;class StringMethod1 
+{
+	public static void main(String[] args) 
+	{
+		String str="Hello";
+		System.out.println("Length: "+ str.length());
+		System.out.println(str.charAt(4));
+		
+		//check string start with 'a'
+		String str1="Aeroplane";
+		if (str1.charAt(0)=='A')
+		{
+			System.out.println("True");
+		}
+		else 
+		{
+		System.out.println("False");
+		}
+		//check given string contains 's'or not
+		String str2="task";
+		boolean flag=false;
+		for(int i=0; i<str2.length();i++)
+		{
+			if(str2.charAt(i)=='s')
+			{
+				flag=true;
+			}
+
+		}
+			if(flag)
+			{
+				System.out.println(" 's' is present");
+			}
+			else
+			{
+				System.out.println("'s' is not present");
+			}
+
+		//
+		}
+	
+}

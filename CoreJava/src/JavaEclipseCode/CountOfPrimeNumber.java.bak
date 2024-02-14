@@ -1,0 +1,50 @@
+//WAP to find how many prime numbers are present in the given number
+//4543 -> two -> 5 and 3
+
+import java.util.Scanner;
+
+class  CountOfPrimeNumber
+{
+	public static void main(String[] args) 
+	{
+	
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter number which is more than three digit: ");
+		int num=sc.nextInt();//4543
+		int cnt=0;
+		while(num!=0)
+		{ 
+			int temp=num%10;
+			num/=10;
+		
+				if(temp==2 || temp==3 ||temp==5 ||temp==7) 
+				{
+					cnt++;
+				}
+							
+		}	
+			System.out.println(cnt+" Prime number present");
+
+			//OR
+
+		/*while(num!=0)
+		{
+			int temp=num%10;
+			for(int i=2;i<temp;i++)
+			{
+				if(temp%i==0)
+				{
+					//System.out.println("not prime");
+					break;
+				}
+				else
+				{
+					System.out.println(temp);
+				}
+				num/=10;
+			}
+		}*/
+			
+	}		
+}
+

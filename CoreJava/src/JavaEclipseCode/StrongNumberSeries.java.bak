@@ -1,0 +1,34 @@
+// WAP to print STRONG NUMBER form 1 to n
+
+import java.util.Scanner;
+class StrongNumberSeries 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter number: ");
+		int num=sc.nextInt();
+		int sum=0;
+		for (int i=1;i<num ;i++)
+		{
+			int n=i;
+			int copy=n;
+			while(n!=0)
+			{
+				int fact=1;
+				int last=n%10;
+				for (int j=1;j<=last ;j++ )
+				{
+					fact*=j;
+				}
+				sum+=fact;
+				n/=10;
+				System.out.println(sum);
+			}
+			if (sum==copy)
+			{
+				System.out.println(sum);
+			}
+		}
+	}
+}

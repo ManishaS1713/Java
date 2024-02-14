@@ -1,0 +1,9 @@
+//Q.92 Replace a particular character in a String
+//Q.93replace perticular word from a sentence
+class  ReplaceCharacter_InString
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("Hello World!");
+	}
+}

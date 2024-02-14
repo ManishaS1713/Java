@@ -1,0 +1,28 @@
+//Q.88 print each word in a String in the given format hELLO mY jAVA
+
+import java.util.Scanner;
+class  ToggleString
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		String str1=sc.next();
+		char [] str=str1.toCharArray();
+		for (int i = 0; i < str1.length(); i++) 
+		{ 
+			if (str[i] >= 'A' && str[i] <= 'Z') 
+			{
+				str[i] = (char)(str[i] + 'a' - 'A'); 
+			}
+			else if (str[i] >= 'a' && str[i] <= 'z')
+			{
+				str[i]= (char)(str[i] + 'A' - 'a');
+			}
+		}
+		System.out.println("Toggled string: ");
+		for (int i = 0; i < str1.length(); i++) 
+		{
+			 System.out.print(str[i]);
+		}
+	}
+}

@@ -1,0 +1,31 @@
+//Q.72 WAP to replace given element in an array
+
+import java.util.Scanner;
+import java.util.Arrays;
+class  ReplaceElementFromArray
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		int []arr={1,2,3,4,5,6,7,8,9};
+		System.out.println("Originalarray is: "+Arrays.toString(arr));
+		System.out.println("\nEnter element which you want to replace: ");
+		int num=sc.nextInt();
+		System.out.println("Enter position where you want to replace: ");
+		int pos=sc.nextInt();
+
+		for(int i=0;i<arr.length;i++)
+		{
+			if(i==pos)
+			{
+				arr[i-1]=num;
+			}
+		}
+		System.out.println("Replace number array is: "+Arrays.toString(arr));
+		
+		/*for(int a: arr)
+		{
+			System.out.println(a);
+		}*/
+	}
+}

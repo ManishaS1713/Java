@@ -1,0 +1,79 @@
+package JavaEclipseCode;import java.util.HashSet;
+import java.util.Iterator;
+
+class Shoes 
+{
+	String brand;
+	int size;
+	double price;
+	Shoes(String brand, int size, double price)
+	{
+		this.brand= brand;
+		this.size= size;
+		this.price= price;
+	}
+	@Override
+	public String toString()
+	{
+		return "Brand: "+ brand +", Size: "+ size +", Price: "+ price;
+	}
+	//take unique size
+	@Override
+		public boolean equals(Object o) 
+			{
+				Shoes temp=(Shoes) o;
+				if (this.size == temp.size)
+				{
+					return true;
+				}
+					return false;
+		
+			}
+	@Override
+		public int hashCode()
+			{
+				return ((Integer)size).hashCode();
+			}
+
+	/*@Override
+	public int compareTo(Object o)				// HastSet never sort the data use TreeSet
+		{
+			Shoes temp=(Shoes)o;
+			if (this.size > temp.size)
+			{
+				return 1;
+			}
+			if (this.size < temp.size)
+			{
+				return -1;
+			}
+				return 0;
+		}*/
+
+
+}
+class  ShoesDriver
+{
+	public static void main(String[] args) 
+	{
+		HashSet hs=new HashSet();
+		hs.add(new Shoes("Nike",7, 1000));
+		hs.add(new Shoes("Puma",8, 1200));
+		hs.add(new Shoes("Nike",9, 1000));
+		hs.add(new Shoes("Skecher",7, 1000));
+
+		System.out.println("output using for-each loop");
+		for(Object o: hs)
+		{
+		System.out.println(o);
+		}
+
+		System.out.println("output using iterator");
+
+		Iterator i= hs.iterator();
+		while(i.hasNext())
+		{
+			System.out.println(i.next());
+		}
+	}
+}

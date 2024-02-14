@@ -1,0 +1,44 @@
+package JavaEclipseCode;//Print N to 1 number usingfor-loop, while-loop,do-while-loop
+
+import java.util.Scanner;
+class ReverseSequence 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		int num=sc.nextInt();
+		int num2=num;
+		int num3=num;
+		
+		//for loop
+		System.out.println( "For loop ");
+
+		for (int i=0;i<num2 ;i++ )
+		{ 
+		System.out.println(num+ " ");
+		num--;
+		}
+		//while loop
+		System.out.println("while loop ");
+		//int cnt=num;
+		while(num3>0)
+		{
+			//cnt--;
+			System.out.println(num3+" ");
+			num3--;
+		}
+		//do-while loop
+		System.out.println("do-while looop ");
+
+		//int c=num2;
+		do
+		{
+			//c--;
+			System.out.println(num2+" ");
+			num2--;
+		}
+		while (num2>0);
+
+
+	}
+}

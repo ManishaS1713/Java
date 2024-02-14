@@ -1,0 +1,9 @@
+//Q.61 print even number from an array
+
+class  ArrayEven
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("Hello World!");
+	}
+}

@@ -1,0 +1,30 @@
+//Q.88.1 print each word in a String in the given format hELLO mY jAVA
+import java.util.Scanner;
+class  ToggleString2
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		String str1=sc.nextLine();
+		System.out.println((str1.charAt(0)+"").toLowerCase());
+
+		for (int i = 1; i < str1.length(); i++) 
+		{ 
+			if (str1.charAt(i-1)==' ') 
+			{
+				String str=str1.charAt(i)+"";
+				System.out.print(str.toLowerCase());;
+			}
+			else
+			{
+				String str=str1.charAt(i)+"";
+				System.out.print(str.toUpperCase());;
+			}
+		}
+	}
+}
+
+/*
+char []ch={'a','b','c'};
+String str=new String(ch)
+o/p "abc" convert in to string with the hellp of String(char[]) constructor

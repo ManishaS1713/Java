@@ -1,0 +1,41 @@
+package JavaEclipseCode;//Q.75 to find most frequent array elements
+
+import java.util.Arrays;
+class  MostFrequentArrayElement
+{
+	public static void main(String[] args) 
+	{
+		int []a={1,2,3,1,2,1,3};
+		System.out.println("original array: ");
+		System.out.println(Arrays.toString(a));
+		int []b=new int[a.length];
+		int flag=-1;
+		for (int i=0;i<a.length ;i++ )
+		{
+			int count=1;
+			for (int j=i+1;j<a.length ;j++ )
+			{
+				if (a[i]==a[j])
+				{
+					b[j]=flag;
+					count++;
+				}
+			}
+			if (b[i]!=flag)
+			{
+				b[i]=count;
+			}
+		}
+		for (int i=0;i<a.length ;i++ )
+		{
+			if (b[i]!=flag)
+			{
+				if(b[i]>b[i+1])
+				{
+				System.out.println("Most frequent element is: "+a[i]+" \nwhich frequency is: "+b[i]);
+				break;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,68 @@
+package JavaEclipseCode;import java.util.Scanner;
+
+	class Assignment2 
+		{
+			@SuppressWarnings("resource")
+			public static void main(String[] args) 
+				{
+				Scanner s= new Scanner(System.in);
+       
+        System.out.println(" 1 Addition \n 2 Subtraction \n 3 Multiplication \n 4 Division \n 5 Mod" );
+        System.out.println("\n Select correct option:-");
+        int i=s.nextInt();
+        System.out.println("\n You were selected "+i+". option");
+        switch(i)
+        {
+            case 1: Scanner s1= new Scanner(System.in);
+            System.out.println("\n Enter 1st number:-");
+			int a=s1.nextInt();
+			System.out.println("\n Enter 2nd number:-");
+			int b=s1.nextInt();
+			int c=a+b;
+			System.out.println("\n Addition is: "+ c);
+			break;
+            
+			case 2: Scanner s2= new Scanner(System.in);
+            System.out.println("\n Enter 1st number :-");
+			int a1=s2.nextInt();
+			System.out.println("\n Enter 2nd number, make sure Value should be less than first number:-");
+			int b1=s2.nextInt();
+			int c1=a1-b1;
+			System.out.println("\n Subtraction is: "+ c1);
+			break;
+
+			case 3: Scanner s3= new Scanner(System.in);
+            System.out.println("\n Enter 1st number :-");
+			int a2=s3.nextInt();
+			System.out.println("\n Enter 2nd number:-");
+			int b2=s3.nextInt();
+			int c2=a2*b2;
+			System.out.println("\n Multiplication is: "+ c2);
+			break;
+
+			case 4: Scanner s4= new Scanner(System.in);
+            System.out.println("\n Enter 1st number :-");
+			int a3=s4.nextInt();
+			System.out.println("\n Enter 2nd number:-");
+			int b3=s4.nextInt();
+			int c3=a3/b3;
+			System.out.println("\n Division is: "+ c3);
+			break;
+
+			case 5: Scanner s5= new Scanner(System.in);
+            System.out.println("\n Enter 1st number :-");
+			int a4=s5.nextInt();
+			System.out.println("\n Enter 2nd number:-");
+			int b4=s5.nextInt();
+			int c4=a4%b4;
+			System.out.println("\n Mod is: "+ c4);
+			break;
+
+			default:
+				System.out.println(" Wrong selection");
+
+
+        }
+
+    }
+}

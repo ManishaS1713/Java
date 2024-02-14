@@ -1,0 +1,40 @@
+package JavaEclipseCode;//Print 1to N number using for-loop, while-loop,do-while-loop
+
+class SequenceNumber 
+{
+	public static void main(String[] args) 
+	{
+		int num=10;
+		int num2=num;
+		
+		//for loop
+		System.out.println( "For loop ");
+
+		for (int i=1;i<=num ;i++ )
+		{ 
+		System.out.println(i+ " ");
+		}
+		//while loop
+		System.out.println("while loop ");
+		int cnt=0;
+		while(num>0)
+		{
+			cnt++;
+			System.out.println(cnt);
+			num--;
+		}
+		//do-while loop
+		System.out.println("do-while looop ");
+
+		int c=0;
+		do
+		{
+			c++;
+			System.out.println(c+" ");
+			num2--;
+		}
+		while (num2>0);
+
+
+	}
+}

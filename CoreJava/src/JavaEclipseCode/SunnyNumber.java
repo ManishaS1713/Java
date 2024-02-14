@@ -1,0 +1,28 @@
+package JavaEclipseCode;//Q.43 Check if the number is SUNNY NUMBER (next number shouldbe a perfect square)
+import java.util.Scanner;
+class SunnyNumber 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("EnterNumber: ");
+		int num1=sc.nextInt();
+		int num=num1+1;
+		boolean flag=false;
+		for (int i=0;i<num;i++)
+		{
+			if(i*i==num)
+			{
+				flag=true;
+			}
+		}
+		if (flag)
+		{
+			System.out.println(num1+" is SUNNY Number");
+		}
+		else
+		{
+			System.out.println(num1+"not SUNNY Number");
+		}
+	}
+}

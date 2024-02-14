@@ -1,0 +1,27 @@
+package JavaEclipseCode;
+//Q.68 Concatinate two array
+
+import java.util.Arrays;
+class  ArrayConcatination
+{
+	public static void main(String[] args) 
+	{
+		char []arr={'a','b','c','d','e'};
+		char []frr={'f','g','h','i'};
+		int n=arr.length+frr.length;
+		char [] con=new char[n];
+		int count=0;
+		for(int i=0;i<arr.length;i++)
+		{
+			con[count]=arr[i];
+			count++;
+		}
+		for(int i=0;i<frr.length;i++)
+		{
+			con[count]=frr[i];
+			count++;
+		}
+		System.out.println("Concatinated array is: ");
+		System.out.print(Arrays.toString(con));
+	}
+}

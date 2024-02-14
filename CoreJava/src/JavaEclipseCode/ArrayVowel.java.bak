@@ -1,0 +1,9 @@
+//Q.62 print vowels from an array
+
+class  ArrayVowel
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("Hello World!");
+	}
+}

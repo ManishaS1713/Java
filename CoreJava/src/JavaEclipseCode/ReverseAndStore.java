@@ -1,0 +1,20 @@
+package JavaEclipseCode;//Q.29 WAP to reverse a number and Store it.
+
+import java.util.Scanner;
+class ReverseAndStore 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter digit number");
+		int num=sc.nextInt();
+		int result=0;		
+		while(num!=0)
+		{
+			int last=num%10;
+			result=result*10+last;
+			num/=10;
+		}
+		System.out.print("Reverse number is "+result);
+	}
+}

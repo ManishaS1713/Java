@@ -1,0 +1,39 @@
+//Q.46 Check whether the given number is PHLOEM NUMBER or not (sum of mean digits != sum of extreame digits)
+// 34316 -> 3+6 != 4+3+1
+
+import java.util.Scanner;
+class PhloemNumber 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner (System.in);
+		System.out.println("Enter Number: ");
+		int num=sc.nextInt();
+		int n=num;
+		int mean=0,extreme=0;
+		while (n!=0)
+		{
+			if (n==num || n<10)
+			{
+				int last=n%10;
+				extreme+=last;
+			}
+			else
+			{
+				int last=n%10;
+				mean+=last;
+			}
+			n/=10;
+		}
+		System.out.println("Extreme: "+extreme);
+		System.out.println("Mean: "+mean);
+		if (mean==extreme)
+		{
+			System.out.println(num+" is not PHLOEM NUMBER");
+		}
+		else
+		{
+			System.out.println(num+" is PHLOEM NUMBER");
+		}
+	}
+}
